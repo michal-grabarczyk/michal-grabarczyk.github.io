@@ -35,26 +35,3 @@ https://www.mkyong.com/spring/spring-profiles-example/
 [Plantuml]: http://plantuml.com/sequence-diagram
 Plantuml
 
-## T420 TrackPoint Linux Change speed
-[source]:https://bbs.archlinux.org/viewtopic.php?id=199998
-
-* /etc/udev/rules.d/99-trackpoint.rules
-{% highlight bash %}
-KERNEL=="serio2", SUBSYSTEM=="serio", DRIVER=="psmouse", ATTR{speed}="200", ATTR{sensitivity}="255"
-{% endhighlight %}
-
-* /etc/systemd/system/trackpoint.service
-
-{% highlight bash %}
-[Unit]
-Description=Set TrackPoint attributes
-
-[Service]
-Type=oneshot
-ExecStartPre=/usr/bin/sleep 5
-ExecStart=/usr/bin/udevadm trigger --subsystem-match=serio
-ExecStartPost=/usr/bin/udevadm info -a -p /sys/devices/platform/i8042/serio1/serio2/
-
-[Install]
-WantedBy=multi-user.target
-{% endhighlight %}

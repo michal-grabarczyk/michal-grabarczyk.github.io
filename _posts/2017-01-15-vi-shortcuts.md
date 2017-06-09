@@ -14,6 +14,20 @@ Following shortcuts works also in vi-mode of IntelliJ Idea.
 * ngt - switches to a tab with given number
 * ZZ - close the current tab
 
+#### Moving around
+* -[minus] - move back number of lines
+* +[plus] - as above
+* H,M,L - move to the hight, middle, low part of the screen
+* Ctrl + e, Ctrl + y - move screen up/down by one line
+* Ctrl + u, Ctrl + d - move screen up/down by 1/2 screen
+* Ctrl + b, Ctrl + f - move screen up/down by 1 screen
+* z + Enter - make the current line top line of screen
+* z. - make the current line middle line of screen
+* z- - make the current line bottom line of screen
+* % - moves to associated ( ), { }, [ ]
+* f [char] - moves forward to char
+* F [char] - moves backward to char
+
 #### Windows
 
 * Ctrl + w, v - vertical window
@@ -31,5 +45,9 @@ Following shortcuts works also in vi-mode of IntelliJ Idea.
 * w - start of the next word
 * e - end of the word
 * d$ - delete to the end of the line
+
+#### Intellij only
+* Ctrl + Shift + " - maximize pane as debug/tests
+* Ctrl + Shift + F12 - maximize view
 
 [idea-vi-mode-intro]: https://www.youtube.com/watch?v=9kqKMFekI9Y
